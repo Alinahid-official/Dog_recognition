@@ -1,0 +1,4 @@
+Pillow
+Django
+django-rest-framework
+tensorflow>=2.0.0

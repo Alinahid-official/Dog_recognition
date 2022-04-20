@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Pet</title>
+</head>
+<body>
+    <div>
+        <form action="" method="post" enctype="multipart/form-data" >
+            {% csrf_token %}
+            <div>
+                <label for="breed">Breed:</label>
+                <input list="breeds" name="breed" id="breed" required>
+                <datalist id="breeds">
+                    <option value="A Crossbreed">
+                    <option value="Akita ">
+                    <option value="Alaskan Malamute">
+                    <option value="Alsatian ( All Breeds )">
+                    <option value="Beagle">
+                    <option value="Belgian Shepherd Dog: ( All Breeds )">
+                    <option value="Belgian Shepherd Dog: Groenendael (BSD)">
+                    <option value="Belgian Shepherd Dog: Malinois (BSD) ">
+                    <option value="Belgian Shepherd Dog: Tervueren (BSD) ">
+                    <option value="Bichon Frise">
+                    <option value="Border Collie">
+                    <option value="Boxer ">
+                    <option value="Bulldog: ( All Breeds ) ">
+                    <option value="Bulldog: English ">
+                    <option value="Cane Corso ">
+                    <option value="Caucasian Shepherd Dog">
+                    <option value="Chihuahua: ( All Breeds )">
+                    <option value="Chihuahua: Long Hr  ">
+                    <option value="Chihuahua: Short Hr ">
+                    <option value="Chinese Crested Dog  ">
+                    <option value="Cocker Spaniel ">
+                    <option value="Collie Cross (Border)  ">
+                    <option value="Dachshund: ( All Breeds ) ">
+                    <option value="Dachshund: Min Long Hr">
+                    <option value="Dachshund: Std Smooth Hr  ">
+                    <option value="Dalmatian">
+                    <option value="Dobermann">
+                    <option value="Dogue De Bordeaux">
+                    <option value="Dutch Shepherd">
+                    <option value="Foxhound  ">
+                    <option value="German Shepherd Dog (GSD / Alsatian) ">
+                    <option value="Golden Retriever ">
+                    <option value="Goldie ">
+                    <option value="Greyhound">
+                    <option value="GSD Cross ( German Shepherd / Alsatian) ">
+                    <option value="Harrier">
+                    <option value="Irish Wolfhound ">
+                    <option value="Jack Russell Terrier (JRT)">
+                    <option value="Lab Cross ">
+                    <option value="Labrador ">
+                    <option value="Lhasa Apso">
+                    <option value="Lurcher  ">
+                    <option value="Mastiff: ( All Breeds )">
+                    <option value="Mastiff: Bull ">
+                    <option value="Mastiff: Old English">
+                    <option value="Newfoundland ">
+                    <option value="Other">
+                    <option value="Patterdale Terrier ">
+                    <option value="Pointer: English">
+                    <option value="Pomeranian">
+                    <option value="Poodle: ( All Breeds ) ">
+                    <option value="Poodle: Miniature  ">
+                    <option value="Pug ">
+                    <option value="Retriever: ( All Breeds )">
+                    <option value="Rottweiler  ">
+                    <option value="Saluki ">
+                    <option value="Shar-Pei ">
+                    <option value="Shih Tzu ">
+                    <option value="Siberian Husky">
+                    <option value="Spaniel Cross">
+                    <option value="Spaniel: ( All Breeds ) ">
+                    <option value="Spaniel: English Springer ">
+                    <option value="St Bernard ">
+                    <option value="Staffordshire Bull Terrier (SBT) ">
+                    <option value="Terrier Cross">
+                    <option value="Terrier: Border">
+                    <option value="Terrier: Cairn ">
+                    <option value="Terrier: English Bull">
+                    <option value="Terrier: Lakeland  ">
+                    <option value="Terrier: Maltese  ">
+                    <option value="Terrier: Yorkshire ">
+                    <option value="Tibetan Mastiff">
+                    <option value="Trailhound">
+                    <option value="Weimaraner ">
+                    <option value="Whippet ">
+                </datalist>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input list="ages" name="age" id="age" required>
+                <datalist id="ages">
+                    <option value="0 to 6  Months">
+                    <option value="7 to 12  Months">
+                    <option value="1 to 2  years">
+                    <option value="2 to 5  years">
+                    <option value="5 to 7  years">
+                    <option value="8 and over  years">
+                </datalist>
+            </div>
+            <div>
+                <label for="size">size:</label>
+                <input list="sizes" name="size" id="size" required>
+                <datalist id="sizes">
+                    <option value="Small">
+                    <option value="Medium">
+                    <option value="Large">
+                    <option value="Giant">
+                </datalist>
+            </div>
+            <div>
+                <label for="dog pic">Picture:</label>
+                <input type="file" name="dog_pic" id="dog_pic" required>
+                
+            </div>
+            <div>
+                <button type="submit"> Submit </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
