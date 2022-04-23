@@ -4,96 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Pets</title>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <div class='heading'>
+            <h1>Dog Catalog</h1>
+        </div>
         <form action="" method="post" enctype="multipart/form-data" >
             {% csrf_token %}
-            <div>
-                <label for="breed">Breed:</label>
-                <input list="breeds" name="breed" id="breed" >
-                <datalist id="breeds">
-                    <option value="A Crossbreed">
-                    <option value="Akita ">
-                    <option value="Alaskan Malamute">
-                    <option value="Alsatian ( All Breeds )">
-                    <option value="Beagle">
-                    <option value="Belgian Shepherd Dog: ( All Breeds )">
-                    <option value="Belgian Shepherd Dog: Groenendael (BSD)">
-                    <option value="Belgian Shepherd Dog: Malinois (BSD) ">
-                    <option value="Belgian Shepherd Dog: Tervueren (BSD) ">
-                    <option value="Bichon Frise">
-                    <option value="Border Collie">
-                    <option value="Boxer ">
-                    <option value="Bulldog: ( All Breeds ) ">
-                    <option value="Bulldog: English ">
-                    <option value="Cane Corso ">
-                    <option value="Caucasian Shepherd Dog">
-                    <option value="Chihuahua: ( All Breeds )">
-                    <option value="Chihuahua: Long Hr  ">
-                    <option value="Chihuahua: Short Hr ">
-                    <option value="Chinese Crested Dog  ">
-                    <option value="Cocker Spaniel ">
-                    <option value="Collie Cross (Border)  ">
-                    <option value="Dachshund: ( All Breeds ) ">
-                    <option value="Dachshund: Min Long Hr">
-                    <option value="Dachshund: Std Smooth Hr  ">
-                    <option value="Dalmatian">
-                    <option value="Dobermann">
-                    <option value="Dogue De Bordeaux">
-                    <option value="Dutch Shepherd">
-                    <option value="Foxhound  ">
-                    <option value="German Shepherd Dog (GSD / Alsatian) ">
-                    <option value="Golden Retriever ">
-                    <option value="Goldie ">
-                    <option value="Greyhound">
-                    <option value="GSD Cross ( German Shepherd / Alsatian) ">
-                    <option value="Harrier">
-                    <option value="Irish Wolfhound ">
-                    <option value="Jack Russell Terrier (JRT)">
-                    <option value="Lab Cross ">
-                    <option value="Labrador ">
-                    <option value="Lhasa Apso">
-                    <option value="Lurcher  ">
-                    <option value="Mastiff: ( All Breeds )">
-                    <option value="Mastiff: Bull ">
-                    <option value="Mastiff: Old English">
-                    <option value="Newfoundland ">
-                    <option value="Other">
-                    <option value="Patterdale Terrier ">
-                    <option value="Pointer: English">
-                    <option value="Pomeranian">
-                    <option value="Poodle: ( All Breeds ) ">
-                    <option value="Poodle: Miniature  ">
-                    <option value="Pug ">
-                    <option value="Retriever: ( All Breeds )">
-                    <option value="Rottweiler  ">
-                    <option value="Saluki ">
-                    <option value="Shar-Pei ">
-                    <option value="Shih Tzu ">
-                    <option value="Siberian Husky">
-                    <option value="Spaniel Cross">
-                    <option value="Spaniel: ( All Breeds ) ">
-                    <option value="Spaniel: English Springer ">
-                    <option value="St Bernard ">
-                    <option value="Staffordshire Bull Terrier (SBT) ">
-                    <option value="Terrier Cross">
-                    <option value="Terrier: Border">
-                    <option value="Terrier: Cairn ">
-                    <option value="Terrier: English Bull">
-                    <option value="Terrier: Lakeland  ">
-                    <option value="Terrier: Maltese  ">
-                    <option value="Terrier: Yorkshire ">
-                    <option value="Tibetan Mastiff">
-                    <option value="Trailhound">
-                    <option value="Weimaraner ">
-                    <option value="Whippet ">
-                </datalist>
-            </div>
-            <div>
+            <div class="row" style="margin-top:30px">
+                <div class="col">
+                    <label for="breed">Breed:</label>
+                    <input class="form-control" placeholder="Breed" list="breeds" name="breed" id="breed" >
+                    <datalist id="breeds">
+                        <option value="A Crossbreed">
+                        <option value="Akita ">
+                        <option value="Alaskan Malamute">
+                        <option value="Alsatian ( All Breeds )">
+                        <option value="Beagle">
+                        <option value="Belgian Shepherd Dog: ( All Breeds )">
+                        <option value="Belgian Shepherd Dog: Groenendael (BSD)">
+                        <option value="Belgian Shepherd Dog: Malinois (BSD) ">
+                        <option value="Belgian Shepherd Dog: Tervueren (BSD) ">
+                        <option value="Bichon Frise">
+                        <option value="Border Collie">
+                        <option value="Boxer ">
+                        <option value="Bulldog: ( All Breeds ) ">
+                        <option value="Bulldog: English ">
+                        <option value="Cane Corso ">
+                        <option value="Caucasian Shepherd Dog">
+                        <option value="Chihuahua: ( All Breeds )">
+                        <option value="Chihuahua: Long Hr  ">
+                        <option value="Chihuahua: Short Hr ">
+                        <option value="Chinese Crested Dog  ">
+                        <option value="Cocker Spaniel ">
+                        <option value="Collie Cross (Border)  ">
+                        <option value="Dachshund: ( All Breeds ) ">
+                        <option value="Dachshund: Min Long Hr">
+                        <option value="Dachshund: Std Smooth Hr  ">
+                        <option value="Dalmatian">
+                        <option value="Dobermann">
+                        <option value="Dogue De Bordeaux">
+                        <option value="Dutch Shepherd">
+                        <option value="Foxhound  ">
+                        <option value="German Shepherd Dog (GSD / Alsatian) ">
+                        <option value="Golden Retriever ">
+                        <option value="Goldie ">
+                        <option value="Greyhound">
+                        <option value="GSD Cross ( German Shepherd / Alsatian) ">
+                        <option value="Harrier">
+                        <option value="Irish Wolfhound ">
+                        <option value="Jack Russell Terrier (JRT)">
+                        <option value="Lab Cross ">
+                        <option value="Labrador ">
+                        <option value="Lhasa Apso">
+                        <option value="Lurcher  ">
+                        <option value="Mastiff: ( All Breeds )">
+                        <option value="Mastiff: Bull ">
+                        <option value="Mastiff: Old English">
+                        <option value="Newfoundland ">
+                        <option value="Other">
+                        <option value="Patterdale Terrier ">
+                        <option value="Pointer: English">
+                        <option value="Pomeranian">
+                        <option value="Poodle: ( All Breeds ) ">
+                        <option value="Poodle: Miniature  ">
+                        <option value="Pug ">
+                        <option value="Retriever: ( All Breeds )">
+                        <option value="Rottweiler  ">
+                        <option value="Saluki ">
+                        <option value="Shar-Pei ">
+                        <option value="Shih Tzu ">
+                        <option value="Siberian Husky">
+                        <option value="Spaniel Cross">
+                        <option value="Spaniel: ( All Breeds ) ">
+                        <option value="Spaniel: English Springer ">
+                        <option value="St Bernard ">
+                        <option value="Staffordshire Bull Terrier (SBT) ">
+                        <option value="Terrier Cross">
+                        <option value="Terrier: Border">
+                        <option value="Terrier: Cairn ">
+                        <option value="Terrier: English Bull">
+                        <option value="Terrier: Lakeland  ">
+                        <option value="Terrier: Maltese  ">
+                        <option value="Terrier: Yorkshire ">
+                        <option value="Tibetan Mastiff">
+                        <option value="Trailhound">
+                        <option value="Weimaraner ">
+                        <option value="Whippet ">
+                    </datalist>
+                </div>
+            
+            
+            <div class="col">
                 <label for="breed">Age:</label>
-                <input list="ages" name="age" id="age" >
+                <input class="form-control" placeholder="Age" list="ages" name="age" id="age" >
                 <datalist id="ages">
                     <option value="0 to 6  Months">
                     <option value="7 to 12  Months">
@@ -103,9 +110,9 @@
                     <option value="8 and over  years">
                 </datalist>
             </div>
-            <div>
+            <div class="col">
                 <label for="breed">size:</label>
-                <input list="sizes" name="size" id="size" >
+                <input placeholder="Size" class="form-control" list="sizes" name="size" id="size" >
                 <datalist id="sizes">
                     <option value="Small">
                     <option value="Medium">
@@ -113,10 +120,51 @@
                     <option value="Giant">
                 </datalist>
             </div>
+            </div>
             <div>
-                <button type="submit"> Search </button>
+                <button style="margin: 15px 15px" type="submit" class="btn btn-danger">Search</button>
             </div>
         </form>
+    </div>
+    <div class="container">
+        <div class='heading'>
+            <h1>Recents</h1>
+        </div>
+        <div class='grid-container'>
+            {% for dog in dogs%}
+        <div class='grid-item'>
+            age: {{dog.age}}<br/>
+            breed:{{dog.breed}}<br/>
+            size:{{dog.size}}<br/>
+           
+        <img src='/media/{{ dog.image}}' height="200px"/>
+        </div>
+        {% endfor %}
+        </div>
+
+    </div>
+        <style>
+            .grid-container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          background-color: #f32180;
+          padding: 10px;
+        }
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+            .heading{
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </div>
 </body>
 </html>

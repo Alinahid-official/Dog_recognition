@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+
 from io import BytesIO
 from django.shortcuts import render
 from numpy import imag
@@ -71,8 +71,8 @@ def petList(req):
 
         print(dogs)
         return render(req,'list.html',{'dogs':dogs})
-    # pet_list=Dog.objects.all()
-    return render(req, 'petList.html')
+    dogs=Dog.objects.all()[:6]
+    return render(req, 'petList.html',{'dogs':dogs})
     # serializer = TaskSerializer(pet_list,many=True)
     # return Response(serializer.data)
 
@@ -82,9 +82,17 @@ def uploadPet(req):
         breed=req.POST['breed']
         size=req.POST['size']
         age=req.POST['age']
-        img=req.FILES['dog_pic']
-
-        Dog(breed=breed,size=size,age=age,image=img).save()
+        file=req.FILES['dog_pic']
+        # img = Image.open(file)
+        
+        # filename= file.name.split('.')
+        # print(filename[0])
+        # rgb_img=img.convert('RGB')
+        # target_name=filename[0]+'.jpg'
+        # # i_io = BytesIO()
+        # p=settings.MEDIA_ROOT + '\\img\\'+target_name
+        # rgb_img.save(p)
+        Dog(breed=breed,size=size,age=age,image=file).save()
         # handle_uploaded_file(img) 
         
         renu()
@@ -111,7 +119,7 @@ def index(request):
         # scores = [(dists[id], img_paths[id]) for id in ids ]
         scores=[]
         for id in ids:
-            if(dists[id]<1):
+            if(dists[id]<1.1):
                 scores.append([dists[id],img_paths[id]])
 
         print(scores)

@@ -1,6 +1,7 @@
 from distutils.command.upload import upload
 from django.db import models
 import os
+from PIL import Image
 from django.conf import settings
 from django.dispatch import receiver
 # Create your models here.
@@ -26,3 +27,11 @@ def auto_delete_file_on_delete(sender, instance, **kwargs):
             print(settings.STATIC_ROOT)
             # os.remove(p)
             os.remove(instance.image.path)
+
+@receiver(models.signals.post_save, sender=Dog)
+def image_to_png(sender, instance, **kwargs):
+    if kwargs.get('created') and instance.image:
+        filename, file_ext = os.path.splitext(instance.image.path)
+        if file_ext != ".jpg":
+            im = Image.open(instance.image.path)
+            im.save(instance.image.path.replace(file_ext, ".jpg"))
